@@ -1100,7 +1100,7 @@ dataIdentifiers = {
         2211 : RawCodec(57, "ApartmentOneSupplyChannelFourTimeScheduleFriday"),
         2212 : RawCodec(57, "ApartmentOneSupplyChannelFourTimeScheduleSaturday"),
         2213 : RawCodec(57, "ApartmentOneSupplyChannelFourTimeScheduleSunday"),
-        2214 : O3EComplexType(2, "BackupBoxConfiguration", [O3EInt8(1, "DischargeLimit", scale=1, signed=False),O3EInt8(1, "Unknown", scale=1, signed=False)]),
+        2214 : O3EComplexType(2, "BackupBoxConfiguration", [O3EInt8(1, "DischargeLimit", scale=1, signed=False),O3EInt8(1, "BackUpBoxInstalled", scale=1, signed=False)]),
         2217 : RawCodec(1, "InputDemandSideManagementlReceiver"),
         2218 : RawCodec(4, "RemoteLimitValueDemandSideManagement"),
         2219 : RawCodec(1, "BatteryCalibration"),
