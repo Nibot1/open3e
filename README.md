@@ -199,7 +199,7 @@ If you want to read several lists of data points with diffetent time schedules o
     -> sets ExternalDomesticHotWaterTargetOperationMode.Mode to 1 and .State to 0
     -> Use -j -r to read data point in json format as template for writing. Always provide valid and complete json data for writing, enclosed in single quotes.
  
-    open3e -j -w 0x6a1.2214='{"DischargeLimit": 20.0, "Unknown": 0.0}'
+    open3e -j -w 0x6a1.2214='{"DischargeLimit": 20.0, "BackupBoxInstalled": 0.0}'
     -> sets BackupBoxConfiguration.DischargeLimit to 20% on VX3 on ECU-address 0x6a1
 
 ## Using complex addressing
@@ -247,7 +247,7 @@ In case of a "negative response" code when writing data, you may try to use the 
     {"mode": "write", "data":[[395,21.5],[396,45.0]]}
 
     to write a discharge limit of 20% to did 2214 (BackupBoxConfiguration) to VX3 on ECU address 0x6a1 as json object:
-    {"mode":"write", "data":[[2214,{"DischargeLimit": 20.0, "Unknown": 0.0}]], "addr":"0x6a1"}
+    {"mode":"write", "data":[[2214,{"DischargeLimit": 20.0, "BackupBoxInstalled": 1.0}]], "addr":"0x6a1"}
 
     doing the same thing using Sub-DID addressing:
     {"mode":"write", "data":[["2214.DischargeLimit",20.0]], "addr":"0x6a1"}
