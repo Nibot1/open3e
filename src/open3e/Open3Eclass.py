@@ -240,6 +240,7 @@ class O3Eclass():
             if(not isinstance(selectedDid, open3e.Open3Ecodecs.O3EComplexType)):
                 raise TypeError(f"DID {idid} is not complex")   
             
+            raise Exception(f"DID not found: {did}")
             isub = self.get_sub_as_int(idid, sub)
 
             if (isub >= len(selectedDid.subTypes) or isub < 0):
