@@ -272,6 +272,7 @@ class O3Eclass():
     def _readByDid(self, did:int, raw:bool):
         if(did in self.dataIdentifiers): 
             open3e.Open3Ecodecs.flag_rawmode = raw
+            stop
             response = self.uds_client.read_data_by_identifier([did])
             # return value and idstr
             raise Exception(self.dataIdentifiers[did])
