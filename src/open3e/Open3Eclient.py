@@ -327,6 +327,7 @@ def main():
         if(raw == None): 
             raw = args.raw
         value,idstr,idid =  dicEcus[addr].readByDid(did, raw, sub)
+        stop
         showread(addr, idid, value, idstr, json, msglvl)    
 
 
