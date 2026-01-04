@@ -229,7 +229,7 @@ class O3Eclass():
             idid = self.get_did_as_int(did)
 
             if(sub is None):
-                raise Exception(f"DID not found: {did}")
+                stop
                 val, idstr = self._readByDid(idid, raw) 
                 return val, idstr, idid
 
