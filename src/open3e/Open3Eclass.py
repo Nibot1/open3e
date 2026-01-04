@@ -251,7 +251,7 @@ class O3Eclass():
             for i in range(isub):
                 startIndexSub += selectedDid.subTypes[i].string_len
             stopIndexSub = startIndexSub + selectedSub.string_len
-
+            raise Exception(f"DID not found: {did}")
             # receive bin data directly, no codec, no conversion
             string_bin,_ = self.readPure(idid, binary=True)
             string_bin_sub = string_bin[startIndexSub:stopIndexSub]
