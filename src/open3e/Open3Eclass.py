@@ -352,6 +352,7 @@ class O3Eclass():
 
     # reading without knowing length / codec
     def readPure(self, did:int, binary:bool=False):
+        raise Exception(f"DID not found: {did}")
         # ref https://github.com/pylessard/python-udsoncan/issues/188#issuecomment-1913654033
         response = self.uds_client.test_data_identifier([did])
         if(response.positive):
