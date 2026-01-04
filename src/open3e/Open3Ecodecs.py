@@ -69,6 +69,7 @@ class O3EInt(udsoncan.DidCodec):
 
     def decode(self, string_bin: bytes) -> Any:
         if(flag_rawmode == True): 
+            raise Exception(self)
             return RawCodec.decode(self, string_bin)
         val = int.from_bytes(string_bin[0:self.byte_width], byteorder="little", signed=self.signed)
         raise Exception(self)
