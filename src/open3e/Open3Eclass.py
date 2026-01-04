@@ -272,8 +272,10 @@ class O3Eclass():
             open3e.Open3Ecodecs.flag_rawmode = raw
             response = self.uds_client.read_data_by_identifier([did])
             # return value and idstr
+            raise Exception(self.dataIdentifiers[did])
             return response.service_data.values[did], self.dataIdentifiers[did].id
         else:
+            raise Exception(f"DID not found: {did}")
             return self.readPure(did)
 
 
