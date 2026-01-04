@@ -241,7 +241,6 @@ class O3Eclass():
             if(not isinstance(selectedDid, open3e.Open3Ecodecs.O3EComplexType)):
                 raise TypeError(f"DID {idid} is not complex")   
             
-            raise Exception(f"DID not found: {did}")
             isub = self.get_sub_as_int(idid, sub)
 
             if (isub >= len(selectedDid.subTypes) or isub < 0):
@@ -253,7 +252,7 @@ class O3Eclass():
             for i in range(isub):
                 startIndexSub += selectedDid.subTypes[i].string_len
             stopIndexSub = startIndexSub + selectedSub.string_len
-            raise Exception(f"DID not found: {did}")
+            stop
             # receive bin data directly, no codec, no conversion
             string_bin,_ = self.readPure(idid, binary=True)
             string_bin_sub = string_bin[startIndexSub:stopIndexSub]
