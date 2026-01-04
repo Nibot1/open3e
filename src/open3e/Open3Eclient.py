@@ -326,7 +326,6 @@ def main():
     def readbydid(addr:int, did:any, json=None, raw=None, msglvl=0, sub=None):
         if(raw == None): 
             raw = args.raw
-        raise Exception(f"DID not found: {did}")
         value,idstr,idid =  dicEcus[addr].readByDid(did, raw, sub)
         showread(addr, idid, value, idstr, json, msglvl)    
 

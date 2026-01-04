@@ -265,6 +265,7 @@ class O3Eclass():
         except NegativeResponseException as e:
             return f'Device rejected this read access. Probably DID {idid} is not available. {e}', f'ERR/{hex(self.tx)}.{idid}', idid
         except Exception as e:
+            raise Exception(f"DID not found: {did}")
             return str(e), f'ERR/{hex(self.tx)}.{did}', idid  # idid not sure
         
                         
